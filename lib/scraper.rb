@@ -26,7 +26,7 @@ class Scraper
         new_hsh[:linkedin] = x.attribute("href").value
       elsif x.attribute("href").value.include?("github")
         new_hsh[:github] = x.attribute("href").value
-      elsif x.attribute("href").value.include?("blog")
+      else
         new_hsh[:blog] = x.attribute("href").value
       end
     end
